@@ -12,14 +12,14 @@ export default class CreateUser extends Component {
 
     handleSubmit = (e) =>{
         e.preventDefault();
-        const firstName = e.target.firstName.value;
-        const lastName = e.target.lastName.value;
+        const first_name = e.target.first_name.value;
+        const last_name = e.target.last_name.value;
         const username = e.target.username.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
     
-        console.log(firstName, lastName, username, email, password, confirmPassword);
+        console.log(first_name, last_name, username, email, password, confirmPassword);
         if (password !== confirmPassword){
             console.log('Password Does Not Match')
             return
@@ -32,8 +32,8 @@ export default class CreateUser extends Component {
 
 
         const requestBody = JSON.stringify({
-            "firstName" : firstName,
-            "lastName" : lastName,
+            "first_name" : first_name,
+            "last_name" : last_name,
             "username" : username,
             "email" : email,
             "password" : password,
@@ -64,12 +64,12 @@ export default class CreateUser extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className='form-group'>
                         <fieldset>
-                            <label htmlFor='firstName'>First Name</label>
-                            <input type='text' className='form-control' name='firstName' placeholder='First Name'></input>
+                            <label htmlFor='first_name'>First Name</label>
+                            <input type='text' className='form-control' name='first_name' placeholder='First Name'></input>
                         </fieldset>
                         <fieldset>
-                            <label htmlFor='lastName'>Last Name</label>
-                            <input type='text' className='form-control' name='lastName' placeholder='Last Name'></input>
+                            <label htmlFor='last_name'>Last Name</label>
+                            <input type='text' className='form-control' name='last_name' placeholder='Last Name'></input>
                         </fieldset>
                         <fieldset>
                             <label htmlFor='username'>Username</label>

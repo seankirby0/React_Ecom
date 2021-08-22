@@ -42,13 +42,13 @@ export default class SingleProduct extends Component {
                 <Link to="/products" className="btn btn-secondary mt-3 mb-3 ml-3">Back To Products</Link> 
                 <div className="card mt-3">
                     <div className="card-header">
-                        Account Information
+                        Product Information
                     </div>
                     <ul className="list-group list-group-flush">
-                        <li className="list-group-item">ID: {product.id}</li>
-                        <li className="list-group-item">First Name: {product.name}</li>
-                        <li className="list-group-item">Last Name: {product.description}</li>
-                        <li className="list-group-item">productname: {product.price}</li>
+                        <li className="list-group-item">Product ID: {product.id}</li>
+                        <li className="list-group-item">Product Name: {product.name}</li>
+                        <li className="list-group-item">Product Description: {product.description}</li>
+                        <li className="list-group-item">Product Price: {product.price}</li>
                     </ul>
             
                 </div>

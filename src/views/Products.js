@@ -23,12 +23,12 @@ export default class Products extends Component {
     }
 
     render() {
-        let products = this.state.products
+        let product = this.state.products
 
         return (
             <>
                 <ul className='list-group'>
-                    {products.map((product, idx) => <ProductDetails product={product} key={idx} />)}
+                    {product.map((product, idx) => <ProductDetails product={product} key={idx} />)}
                 </ul>
             </>
         )

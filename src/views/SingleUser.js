@@ -47,8 +47,8 @@ export default class SingleUser extends Component {
                 </div>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">ID: {user.id}</li>
-                    <li className="list-group-item">First Name: {user.firstName}</li>
-                    <li className="list-group-item">Last Name: {user.lastName}</li>
+                    <li className="list-group-item">First Name: {user.first_name}</li>
+                    <li className="list-group-item">Last Name: {user.last_name}</li>
                     <li className="list-group-item">Username: {user.username}</li>
                     <li className="list-group-item">Email: {user.email}</li>
                 </ul>

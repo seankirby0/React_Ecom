@@ -4,7 +4,7 @@ export default class Cart extends Component {
     render() {
         return (
             <div>
-                CAR PAGE 
+                CART PAGE 
             </div>
         )
     }
