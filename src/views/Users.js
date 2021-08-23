@@ -27,7 +27,7 @@ export default class Users extends Component {
         // const u = this.state.users
         return (
             <div>
-                <Link to='/create-user' className='btn btn-primary mt-3'>Create User</Link>
+                <Link to='/create-user' className='btn btn-primary mt-3'>Register</Link>
                 <div className='row'>
                 {this.state.users.map((u, i) => {
                     return <UserInfo user={u} key= {i} />

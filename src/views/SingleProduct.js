@@ -12,7 +12,7 @@ export default class SingleProduct extends Component {
 
     componentDidMount(){
         const productId = this.props.match.params.id
-        fetch(`https://cart-api-66.herokuapp.com/products`)
+        fetch(`https://cart-api-66.herokuapp.com/${productId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -40,18 +40,19 @@ export default class SingleProduct extends Component {
         return (
             <div>
                 <Link to="/products" className="btn btn-secondary mt-3 mb-3 ml-3">Back To Products</Link> 
-                <div className="card mt-3">
-                    <div className="card-header">
-                        Product Information
+                <div className="col-12 col-lg-4 col-md-6 col-sm-8">
+                <li className='list-group-item mt-3'>
+                    <div >
+                        <h3>{product.name}</h3>
+                        {/* <p>{product.id}</p> */}
+                        <img src={`${product.image_url}` } className='card-img-top' alt='img'  />
+                        <p>{product.description}</p>
+                        <h4>${product.price}</h4>
+                        <Link to={`/products/${product.id}`} className='btn btn-secondary mx-auto'>View Product</Link>
+                        <Link to={`/cart`} className='btn btn-success mx-3'>Add to Cart</Link>
                     </div>
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">Product ID: {product.id}</li>
-                        <li className="list-group-item">Product Name: {product.name}</li>
-                        <li className="list-group-item">Product Description: {product.description}</li>
-                        <li className="list-group-item">Product Price: {product.price}</li>
-                    </ul>
-            
-                </div>
+                </li>
+                </div>    
             </div>
         )
     }

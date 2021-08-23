@@ -17,29 +17,29 @@ export default class Nav extends Component {
                             <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/about">About</Link>
+                            <Link className="nav-link active" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/users">Users</Link>
+                            <Link className="nav-link active" to="/users">Users</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/products">Products</Link>
+                            <Link className="nav-link active" to="/products">Products</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/cart">Your Cart</Link>
+                            <Link className="nav-link active" to="/cart">Your Cart</Link>
                             </li>
                         </ul>
                         <ul className="navbar-nav ms-auto">
-                        {/* {this.props.isLoggedIn ? ( */}
+                        {this.props.isLoggedIn ? (
                                 <li className="nav-item">
                                 <Link className="nav-link" to="/"onClick={this.props.logOut}>Logout</Link>
                                 </li>
-                            ) : (
+                                ) : (
                                 <li className="nav-item">
                                 <Link className="nav-link" to="login">Login</Link>
                                 </li>
                                 )
-                                {/* } */}
+                        } 
                         </ul>
                     </div>
                     </div>

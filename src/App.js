@@ -9,6 +9,7 @@ import CreateUser from './views/CreateUser';
 import Login from './views/Login';
 import SingleUser from './views/SingleUser';
 import Cart from './views/Cart';
+import SingleProduct from './views/SingleProduct';
 
 export default class App extends Component {
   render() {
@@ -25,6 +26,7 @@ export default class App extends Component {
             <Route exact path='/login' render={ () => <Login />  } />
             <Route exact path='/cart' render={ () => <Cart />  } />
             <Route exact path='/users/:id'component={SingleUser} />
+            <Route exact path='/products/:id'component={SingleProduct} />
 
 
           </Switch>

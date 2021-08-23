@@ -60,7 +60,7 @@ export default class CreateUser extends Component {
             this.state.redirect ? 
             <Redirect to={this.state.redirect} /> :
             <div>
-                <h2>Create User</h2>
+                <h2>Register</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className='form-group'>
                         <fieldset>
@@ -87,7 +87,7 @@ export default class CreateUser extends Component {
                             <label htmlFor='confirmPassword'>Confirm Password</label>
                             <input type='password' className='form-control' name='confirmPassword' placeholder='Confirm Password'></input>
                         </fieldset>
-                        <button type='submit' className='btn btn-outline-primary mt-3'>Submit</button>
+                        <button type='submit' className='btn btn-outline-primary mt-3'>Register</button>
                     </div>
                 </form>
             </div>
